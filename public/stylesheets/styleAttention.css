@@ -1,0 +1,13 @@
+body {
+  color: red;
+  /* Цвет символа */
+  background: black;
+  font-size: 300%;
+  /* Размер шрифта */
+}
+
+p {
+  color: whight;
+  /* Цвет текста */
+}
+
