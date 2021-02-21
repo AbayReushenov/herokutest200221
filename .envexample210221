@@ -1,0 +1,6 @@
+PORT=3000
+DATABASE_CONNECTION_ADRESS_PREFIX=mongodb+srv://
+DATABASE_CONNECTION_ADRESS=cluster0.ndxpv.mongodb.net
+DATABASE_CONNECTION_OPTIONS=retryWrites=true&w=majority
+DB_USER_NAME=db**************
+DB_PASSWORD=pass*************
