@@ -6,7 +6,7 @@ const checkAuth = async (req, res, next) => {
     const user = await User.findById(userId);
     if (user) {
       res.locals.name = user.name; /* res.locals.name =  локальная переменная ответа */
-      req.app.locals.aaa = 'aaa'; /* req.app.locals = глобальные переменые */
+      req.app.locals.aaa = 'aba'; /* req.app.locals = глобальные переменые */
       return next();
     }
     return res.status(401).redirect('/');

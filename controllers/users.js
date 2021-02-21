@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-underscore-dangle */
 const bcrypt = require('bcrypt');
 const User = require('../models/modelUser');
 
@@ -23,7 +21,6 @@ function userOut(req, res) {
 
 async function regToBase(req, res) {
   const { name, email, pass } = req.body;
-  console.log('=input==', name, email, pass);
   if (name && email && pass) {
     try {
       const hash = await bcrypt.hash(pass, saltRounds);
@@ -32,13 +29,10 @@ async function regToBase(req, res) {
         pass: hash,
         email,
       });
-      console.log('=4==', user);
       await user.save();
-      console.log('=4.5=', user);
       req.session.user = {
         id: user._id,
       };
-      console.log('=5===    req.session.user', req.session.user);
       return res.redirect('/main');
     } catch (err) {
       return res.redirect('/');

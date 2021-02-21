@@ -13,7 +13,7 @@ const options = {
   // family: 4 // Use IPv4, skip trying IPv6
 };
 
-const dbURL = 'mongodb://localhost:27017/w2d2repeatauth25012021';
+const dbURL = `${process.env.DATABASE_CONNECTION_ADRESS}/herokutest200221`;
 function dbConnect() {
   mongoose.connect(dbURL, options, (error) => {
     if (error) return console.log(error);
